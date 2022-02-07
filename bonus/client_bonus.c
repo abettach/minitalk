@@ -1,14 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abettach <abettach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/07 19:23:02 by abettach          #+#    #+#             */
+/*   Updated: 2022/02/07 19:28:33 by abettach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk_bonus.h"
-
-static size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 static void	ft_putstr(char *s)
 {
@@ -21,7 +23,7 @@ static void	ft_putstr(char *s)
 		write(1, &s[i++], 1);
 }
 
-static int     ft_atoi(const char *str)
+static int	ft_atoi(const char *str)
 {
 	int	i;
 	int	s;
@@ -81,4 +83,3 @@ int	main(int ac, char **av)
 		ft_putstr("Usage : ./client <PID>  <STRING> \n");
 	return (0);
 }
-

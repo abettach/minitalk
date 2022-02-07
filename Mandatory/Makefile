@@ -2,7 +2,7 @@ NAME1 = client
 NAME2 = server
 
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = #-Wall -Wextra -Werror
 RM = rm -f
 
 

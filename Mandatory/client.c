@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abettach <abettach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/07 19:20:00 by abettach          #+#    #+#             */
+/*   Updated: 2022/02/07 19:20:17 by abettach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 static size_t	ft_strlen(const char *s)
@@ -21,7 +33,7 @@ static void	ft_putstr(char *s)
 		write(1, &s[i++], 1);
 }
 
-static int     ft_atoi(const char *str)
+static int	ft_atoi(const char *str)
 {
 	int	i;
 	int	s;
@@ -50,8 +62,8 @@ static void	send_bit(int pid, char *s, size_t len)
 	int		count;
 	size_t	i;
 
-	i = 0;
-	while (i <= len)
+	i = -1;
+	while (++i <= len)
 	{
 		count = -1;
 		while (++count < 8)
@@ -62,7 +74,6 @@ static void	send_bit(int pid, char *s, size_t len)
 				kill(pid, SIGUSR1);
 			usleep(1000);
 		}
-		i++;
 	}
 }
 

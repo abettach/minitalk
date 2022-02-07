@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abettach <abettach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/07 19:21:44 by abettach          #+#    #+#             */
+/*   Updated: 2022/02/07 19:22:47 by abettach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk_bonus.h"
 
-static void    ft_putchar(char c)
+static void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
 static void	ft_putnbr(int nb, int c)
@@ -22,14 +34,14 @@ static void	ft_putnbr(int nb, int c)
 		ft_putnbr(n / 10, 0);
 		ft_putnbr(n % 10, 0);
 	}
-    if (c == 1)
-        write(1, "\n", 1);                     
+	if (c == 1)
+		write(1, "\n", 1);
 }
 
 static void	ft_reset(int pid)
 {
-    if (pid)
-        ft_putnbr(getpid(), 1);
+	if (pid)
+		ft_putnbr(getpid(), 1);
 	g_var.c = 0;
 	g_var.bit_pos = 0;
 }

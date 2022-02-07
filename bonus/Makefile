@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 
-SRCS1 =  client_bonus.c
+SRCS1 =  client_bonus.c ft_strlen.c
 
 SRCS2 =  server_bonus.c
 

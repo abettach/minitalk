@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abettach <abettach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 19:20:56 by abettach          #+#    #+#             */
-/*   Updated: 2022/02/07 19:21:19 by abettach         ###   ########.fr       */
+/*   Created: 2022/02/07 19:27:20 by abettach          #+#    #+#             */
+/*   Updated: 2022/02/07 19:28:43 by abettach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
-# include <unistd.h>
-# include <stdlib.h> 
-# include <signal.h>
-# include <stdio.h>
-# define MYSIGNAL 30
+#include "minitalk_bonus.h"
 
-typedef struct s_var
+size_t	ft_strlen(const char *s)
 {
-	char	c;
-	size_t	bit_pos;
-}	t_var;
-t_var	g_var;
+	int	i;
 
-#endif
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
