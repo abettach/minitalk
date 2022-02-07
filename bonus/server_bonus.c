@@ -40,13 +40,12 @@ static void	get_char(int bit, siginfo_t *info, void *context)
 	g_var.c += (bit - MYSIGNAL) << g_var.bit_pos++;
 	if (g_var.bit_pos == 8)
 	{
-		if (g_var.c)
+		ft_putchar(g_var.c);
+		if (!g_var.c)
 		{
 			kill(info->si_pid, SIGUSR1);
-			ft_putchar(g_var.c);
-		}
-		else if (!g_var.c)
 			ft_putchar('\n');
+		}
 		ft_reset(0);
 	}
 }

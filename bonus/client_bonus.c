@@ -69,7 +69,7 @@ static void	send_bit(int pid, char *s, size_t len)
 void	recive_message(int i)
 {
 	if (i == SIGUSR1)
-		ft_putstr("(message recived !)\n");
+		ft_putstr("OK!\n");
 }
 
 int	main(int ac, char **av)
@@ -81,3 +81,4 @@ int	main(int ac, char **av)
 		ft_putstr("Usage : ./client <PID>  <STRING> \n");
 	return (0);
 }
+
